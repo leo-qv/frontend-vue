@@ -16,7 +16,7 @@ export default Vue.extend({
   },
   computed: {
     getMoinMessage(): string{
-      return this.$store.state.message.content;
+      return this.$store.state.moinMessage;
     }
   }
 });

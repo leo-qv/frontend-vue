@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Vuex, { StoreOptions } from "vuex";
 import { RootState } from "./types";
-import {message} from "./modules/message"
 
 Vue.use(Vuex);
 
@@ -17,9 +16,7 @@ const store: StoreOptions<RootState> = {
   state: {
     moinMessage: "Hi from great city",
   },
-  modules: {
-    message
-  },
+  modules: {},
 };
 
 
