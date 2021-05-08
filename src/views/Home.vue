@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <HelloWorld :msg=getMoinMessage />
   </div>
 </template>
 
@@ -14,5 +14,10 @@ export default Vue.extend({
   components: {
     HelloWorld,
   },
+  computed: {
+    getMoinMessage(): string{
+      return this.$store.state.moinMessage;
+    }
+  }
 });
 </script>
