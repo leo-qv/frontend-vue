@@ -39,7 +39,8 @@ export default Vue.extend({
     };
   },
   mounted() {
-  this.catsArray =  this.$store.ge;
+    console.log("Mounted");
+    this.$store.dispatch("loadMessages")
   },
 });
 </script>

@@ -3,11 +3,12 @@ import { RootState } from "../types";
 import { MessageState } from "./types";
 
 export const actions: ActionTree<MessageState, RootState> = {
-   loadMessages({commit}): any{
-       fetch('')
+   loadMessages(): any{
+       fetch('http://localhost:8081/data/messages')
        .then(data => data.json())
        .then(data => {
-           commit(" ", data)
+           console.log(data);
+           return data;
        })
    }
 }
