@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld :msg=getMoinMessage />
+    <HelloWorld :msg=messageInfo />
   </div>
 </template>
 
@@ -17,6 +17,11 @@ export default Vue.extend({
   computed: {
     getMoinMessage(): string{
       return this.$store.state.message.content;
+    },
+    messageInfo: {
+      get(): string {
+        return this.$store.getters.getMessageInfo;
+      }
     }
   }
 });
