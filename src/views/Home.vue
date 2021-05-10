@@ -40,7 +40,8 @@ export default Vue.extend({
   },
   mounted() {
     console.log("Mounted");
-    this.$store.dispatch("loadMessages")
+    this.$store.dispatch("loadMessages");
+    console.log(process.env.VUE_APP_ROOT_API);
   },
 });
 </script>
